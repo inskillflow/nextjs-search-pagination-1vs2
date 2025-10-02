@@ -1,0 +1,592 @@
+###
+# API Articles Next.js 15 - Insertion de 50 articles variés
+# Ce fichier permet d'ajouter du contenu de test diversifié
+# Certains articles sont publiés, d'autres sont des brouillons
+###
+
+### 1. Article sur React
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "Les hooks React expliqués simplement",
+  "content": "Les hooks React ont révolutionné la façon dont nous écrivons des composants fonctionnels. useState, useEffect, useContext... découvrez comment les maîtriser pour créer des applications React modernes et performantes.",
+  "excerpt": "Maîtrisez les hooks React pour des composants plus efficaces",
+  "published": true,
+  "tags": ["react", "hooks", "javascript", "frontend"]
+}
+
+### 2. Article sur Vue.js (brouillon)
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "Vue.js 3 : Composition API et Reactivity",
+  "content": "Vue.js 3 introduit la Composition API qui change la donne pour l'organisation du code. Cette nouvelle approche offre plus de flexibilité et une meilleure réutilisabilité des composants.",
+  "published": false,
+  "tags": ["vuejs", "composition-api", "javascript"]
+}
+
+### 3. Article sur Node.js
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "Créer une API REST avec Node.js et Express",
+  "content": "Node.js et Express forment un duo parfait pour créer des APIs REST robustes. Ce guide vous accompagne dans la création d'une API complète avec authentification, validation et gestion d'erreurs.",
+  "excerpt": "Guide complet pour créer une API REST professionnelle",
+  "published": true,
+  "tags": ["nodejs", "express", "api", "backend"]
+}
+
+### 4. Article sur CSS (brouillon)
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "CSS Grid vs Flexbox : Quand utiliser quoi ?",
+  "content": "CSS Grid et Flexbox sont deux systèmes de mise en page puissants mais différents. Apprenez à choisir le bon outil selon vos besoins de layout.",
+  "published": false,
+  "tags": ["css", "grid", "flexbox", "layout"]
+}
+
+### 5. Article sur Python
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "Python pour l'analyse de données avec Pandas",
+  "content": "Pandas est la bibliothèque incontournable pour l'analyse de données en Python. Découvrez comment manipuler, nettoyer et analyser vos données efficacement avec cette puissante librairie.",
+  "excerpt": "Maîtrisez l'analyse de données avec Pandas",
+  "published": true,
+  "tags": ["python", "pandas", "data-science", "analyse"]
+}
+
+### 6. Article sur Docker
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "Containeriser une application avec Docker",
+  "content": "Docker révolutionne le déploiement d'applications. Apprenez à créer des conteneurs, gérer les images et orchestrer vos services pour un déploiement simplifié et reproductible.",
+  "published": true,
+  "tags": ["docker", "containerisation", "devops", "deployment"]
+}
+
+### 7. Article sur MongoDB (brouillon)
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "MongoDB : Base de données NoSQL pour applications modernes",
+  "content": "MongoDB offre une alternative flexible aux bases de données relationnelles. Découvrez comment structurer vos données et optimiser vos requêtes dans cette base NoSQL populaire.",
+  "published": false,
+  "tags": ["mongodb", "nosql", "database", "backend"]
+}
+
+### 8. Article sur Git
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "Git : Maîtriser le versioning de code",
+  "content": "Git est l'outil de versioning le plus utilisé au monde. Branches, merges, rebases... apprenez les concepts avancés pour gérer efficacement vos projets collaboratifs.",
+  "excerpt": "Devenez expert en gestion de versions avec Git",
+  "published": true,
+  "tags": ["git", "versioning", "collaboration", "devtools"]
+}
+
+### 9. Article sur Sass (brouillon)
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "Sass : CSS avec des super-pouvoirs",
+  "content": "Sass étend CSS avec des variables, des mixins et des fonctions. Organisez mieux vos styles et gagnez en productivité avec ce préprocesseur CSS incontournable.",
+  "published": false,
+  "tags": ["sass", "css", "preprocessor", "frontend"]
+}
+
+### 10. Article sur GraphQL
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "GraphQL : L'alternative moderne aux APIs REST",
+  "content": "GraphQL révolutionne la façon dont nous consommons les APIs. Une seule requête, des données précises, un typage fort... découvrez pourquoi GraphQL séduit tant de développeurs.",
+  "excerpt": "Découvrez la puissance de GraphQL pour vos APIs",
+  "published": true,
+  "tags": ["graphql", "api", "backend", "frontend"]
+}
+
+### 11. Article sur Webpack (brouillon)
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "Webpack : Bundler moderne pour applications web",
+  "content": "Webpack transforme et bundle vos assets pour le web. Configuration, loaders, plugins... maîtrisez cet outil essentiel du développement moderne.",
+  "published": false,
+  "tags": ["webpack", "bundler", "build-tools", "frontend"]
+}
+
+### 12. Article sur Jest
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "Tests unitaires avec Jest : Guide pratique",
+  "content": "Jest rend les tests JavaScript simples et agréables. Mocks, snapshots, coverage... apprenez à tester efficacement vos applications pour garantir leur qualité.",
+  "published": true,
+  "tags": ["jest", "testing", "javascript", "quality"]
+}
+
+### 13. Article sur Redis (brouillon)
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "Redis : Cache et base de données en mémoire",
+  "content": "Redis excelle comme système de cache et base de données en mémoire. Sessions, cache applicatif, pub/sub... explorez les multiples usages de cette technologie performante.",
+  "published": false,
+  "tags": ["redis", "cache", "database", "performance"]
+}
+
+### 14. Article sur AWS
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "Déployer sur AWS : EC2, S3 et RDS",
+  "content": "Amazon Web Services offre une infrastructure cloud complète. Apprenez à déployer vos applications avec EC2, stocker vos fichiers sur S3 et gérer vos bases de données avec RDS.",
+  "excerpt": "Guide de déploiement sur l'infrastructure AWS",
+  "published": true,
+  "tags": ["aws", "cloud", "deployment", "infrastructure"]
+}
+
+### 15. Article sur Angular (brouillon)
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "Angular : Framework enterprise pour applications web",
+  "content": "Angular propose une approche structurée pour les grandes applications. Services, modules, routing... découvrez comment architecturer des applications robustes et maintenables.",
+  "published": false,
+  "tags": ["angular", "typescript", "framework", "enterprise"]
+}
+
+### 16. Article sur PostgreSQL
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "PostgreSQL : Base de données relationnelle avancée",
+  "content": "PostgreSQL combine la fiabilité du relationnel avec des fonctionnalités avancées. JSON, extensions, performances... explorez cette base de données polyvalente et puissante.",
+  "published": true,
+  "tags": ["postgresql", "database", "sql", "backend"]
+}
+
+### 17. Article sur Tailwind CSS (brouillon)
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "Tailwind CSS : Framework utilitaire pour un design rapide",
+  "content": "Tailwind CSS révolutionne l'approche du CSS avec ses classes utilitaires. Responsive design, customisation, optimisation... créez des interfaces modernes rapidement.",
+  "published": false,
+  "tags": ["tailwind", "css", "framework", "design"]
+}
+
+### 18. Article sur Kubernetes
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "Kubernetes : Orchestration de conteneurs à grande échelle",
+  "content": "Kubernetes automatise le déploiement et la gestion de conteneurs. Pods, services, deployments... maîtrisez l'orchestration pour des applications cloud-native robustes.",
+  "excerpt": "Maîtrisez l'orchestration avec Kubernetes",
+  "published": true,
+  "tags": ["kubernetes", "orchestration", "devops", "cloud"]
+}
+
+### 19. Article sur Svelte (brouillon)
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "Svelte : Le framework qui compile vos composants",
+  "content": "Svelte adopte une approche unique en compilant vos composants. Moins de code, meilleures performances... découvrez ce framework JavaScript innovant et ses avantages.",
+  "published": false,
+  "tags": ["svelte", "framework", "javascript", "performance"]
+}
+
+### 20. Article sur Elasticsearch
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "Elasticsearch : Moteur de recherche et d'analyse",
+  "content": "Elasticsearch excelle dans la recherche textuelle et l'analyse de données. Index, requêtes, agrégations... implémentez des fonctionnalités de recherche avancées dans vos applications.",
+  "published": true,
+  "tags": ["elasticsearch", "search", "analytics", "backend"]
+}
+
+### 21. Article sur Flutter (brouillon)
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "Flutter : Développement mobile cross-platform",
+  "content": "Flutter permet de créer des applications mobiles natives pour iOS et Android avec un seul code. Widgets, animations, performances... explorez ce framework de Google.",
+  "published": false,
+  "tags": ["flutter", "mobile", "cross-platform", "dart"]
+}
+
+### 22. Article sur Nginx
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "Nginx : Serveur web haute performance",
+  "content": "Nginx excelle comme serveur web et reverse proxy. Configuration, load balancing, SSL... optimisez la performance et la sécurité de vos applications web.",
+  "excerpt": "Optimisez vos applications avec Nginx",
+  "published": true,
+  "tags": ["nginx", "web-server", "performance", "devops"]
+}
+
+### 23. Article sur Rust (brouillon)
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "Rust : Langage système moderne et sûr",
+  "content": "Rust combine performance et sécurité mémoire. Ownership, borrowing, traits... découvrez ce langage qui révolutionne la programmation système.",
+  "published": false,
+  "tags": ["rust", "systems", "performance", "safety"]
+}
+
+### 24. Article sur GraphQL avec Apollo
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "Apollo Client : GraphQL côté frontend",
+  "content": "Apollo Client simplifie l'intégration de GraphQL dans vos applications React. Cache intelligent, optimistic updates, subscriptions... maîtrisez cet écosystème puissant.",
+  "published": true,
+  "tags": ["apollo", "graphql", "react", "frontend"]
+}
+
+### 25. Article sur Deno (brouillon)
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "Deno : Runtime JavaScript/TypeScript moderne",
+  "content": "Deno repense l'exécution de JavaScript/TypeScript. Sécurité par défaut, modules ES, TypeScript natif... explorez cette alternative moderne à Node.js.",
+  "published": false,
+  "tags": ["deno", "javascript", "typescript", "runtime"]
+}
+
+### 26. Article sur Prisma
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "Prisma : ORM moderne pour bases de données",
+  "content": "Prisma modernise l'accès aux bases de données avec un ORM type-safe. Migrations, client généré, introspection... simplifiez vos interactions avec la base de données.",
+  "excerpt": "Simplifiez vos bases de données avec Prisma",
+  "published": true,
+  "tags": ["prisma", "orm", "database", "typescript"]
+}
+
+### 27. Article sur WebAssembly (brouillon)
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "WebAssembly : Performance native dans le navigateur",
+  "content": "WebAssembly apporte des performances proches du natif au web. Compilation, interopérabilité, cas d'usage... découvrez cette technologie qui étend les possibilités du web.",
+  "published": false,
+  "tags": ["webassembly", "performance", "web", "native"]
+}
+
+### 28. Article sur Vite
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "Vite : Build tool ultra-rapide pour le développement",
+  "content": "Vite révolutionne l'expérience de développement avec son serveur de développement instantané. HMR, build optimisé, plugins... boostez votre productivité avec cet outil moderne.",
+  "published": true,
+  "tags": ["vite", "build-tools", "development", "frontend"]
+}
+
+### 29. Article sur Supabase (brouillon)
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "Supabase : Alternative open-source à Firebase",
+  "content": "Supabase offre une stack complète pour vos applications : base de données PostgreSQL, authentification, API temps réel... découvrez cette plateforme prometteuse.",
+  "published": false,
+  "tags": ["supabase", "backend", "postgresql", "realtime"]
+}
+
+### 30. Article sur Remix
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "Remix : Framework React full-stack",
+  "content": "Remix repense le développement web avec React. Server-side rendering, progressive enhancement, gestion des données... créez des applications web performantes et résilientes.",
+  "excerpt": "Développement web moderne avec Remix",
+  "published": true,
+  "tags": ["remix", "react", "fullstack", "ssr"]
+}
+
+### 31. Article sur Astro (brouillon)
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "Astro : Générateur de sites statiques multi-framework",
+  "content": "Astro permet d'utiliser React, Vue, Svelte dans le même projet. Islands architecture, hydratation partielle... optimisez les performances de vos sites web.",
+  "published": false,
+  "tags": ["astro", "static-site", "multi-framework", "performance"]
+}
+
+### 32. Article sur Playwright
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "Playwright : Tests end-to-end multi-navigateurs",
+  "content": "Playwright automatise les tests sur Chrome, Firefox et Safari. API moderne, debugging avancé, CI/CD... assurez la qualité de vos applications web sur tous les navigateurs.",
+  "published": true,
+  "tags": ["playwright", "testing", "e2e", "automation"]
+}
+
+### 33. Article sur Solid.js (brouillon)
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "Solid.js : Réactivité fine pour applications performantes",
+  "content": "Solid.js offre une réactivité granulaire sans virtual DOM. Performances exceptionnelles, API familière... découvrez ce framework JavaScript innovant.",
+  "published": false,
+  "tags": ["solidjs", "reactivity", "performance", "javascript"]
+}
+
+### 34. Article sur Turborepo
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "Turborepo : Monorepo haute performance",
+  "content": "Turborepo optimise les builds dans les monorepos. Cache intelligent, exécution parallèle, pipeline... gérez efficacement vos projets multi-packages.",
+  "excerpt": "Optimisez vos monorepos avec Turborepo",
+  "published": true,
+  "tags": ["turborepo", "monorepo", "build", "performance"]
+}
+
+### 35. Article sur Storybook (brouillon)
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "Storybook : Développement de composants isolés",
+  "content": "Storybook facilite le développement et la documentation de composants UI. Stories, addons, tests visuels... créez une bibliothèque de composants robuste.",
+  "published": false,
+  "tags": ["storybook", "components", "ui", "documentation"]
+}
+
+### 36. Article sur Cypress
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "Cypress : Tests end-to-end pour applications web",
+  "content": "Cypress révolutionne les tests e2e avec son approche developer-friendly. Time travel debugging, real browser testing... testez vos applications comme un utilisateur réel.",
+  "published": true,
+  "tags": ["cypress", "testing", "e2e", "frontend"]
+}
+
+### 37. Article sur Framer Motion (brouillon)
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "Framer Motion : Animations React déclaratives",
+  "content": "Framer Motion simplifie les animations React. Transitions fluides, gestures, layout animations... créez des interfaces utilisateur engageantes et interactives.",
+  "published": false,
+  "tags": ["framer-motion", "animations", "react", "ui"]
+}
+
+### 38. Article sur Zod
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "Zod : Validation de schémas TypeScript-first",
+  "content": "Zod offre une validation de données type-safe pour TypeScript. Schémas composables, inférence de types, messages d'erreur... sécurisez vos données avec élégance.",
+  "excerpt": "Validation type-safe avec Zod",
+  "published": true,
+  "tags": ["zod", "validation", "typescript", "type-safety"]
+}
+
+### 39. Article sur tRPC (brouillon)
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "tRPC : APIs TypeScript end-to-end type-safe",
+  "content": "tRPC apporte la type-safety de bout en bout pour vos APIs. Pas de génération de code, inférence automatique... développez des APIs robustes avec TypeScript.",
+  "published": false,
+  "tags": ["trpc", "api", "typescript", "type-safety"]
+}
+
+### 40. Article sur Vitest
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "Vitest : Framework de test ultra-rapide",
+  "content": "Vitest apporte la vitesse de Vite aux tests unitaires. Compatible Jest, HMR pour les tests, ESM natif... testez vos applications avec une expérience développeur exceptionnelle.",
+  "published": true,
+  "tags": ["vitest", "testing", "vite", "performance"]
+}
+
+### 41. Article sur Pinia (brouillon)
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "Pinia : State management moderne pour Vue.js",
+  "content": "Pinia remplace Vuex avec une API plus simple et type-safe. Stores modulaires, devtools, SSR... gérez l'état de vos applications Vue.js efficacement.",
+  "published": false,
+  "tags": ["pinia", "vuejs", "state-management", "typescript"]
+}
+
+### 42. Article sur Headless UI
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "Headless UI : Composants accessibles sans style",
+  "content": "Headless UI fournit des composants React/Vue accessibles sans styling. Modals, dropdowns, tabs... construisez des interfaces utilisateur inclusives et personnalisables.",
+  "excerpt": "Composants accessibles avec Headless UI",
+  "published": true,
+  "tags": ["headless-ui", "accessibility", "components", "react"]
+}
+
+### 43. Article sur Radix UI (brouillon)
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "Radix UI : Primitives UI de haute qualité",
+  "content": "Radix UI offre des primitives React non-stylées mais complètes. Accessibilité, keyboard navigation, focus management... créez des design systems robustes.",
+  "published": false,
+  "tags": ["radix-ui", "primitives", "react", "design-system"]
+}
+
+### 44. Article sur Mantine
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "Mantine : Bibliothèque de composants React complète",
+  "content": "Mantine propose plus de 100 composants React customisables. Hooks utilitaires, thème système, dark mode... accélérez le développement de vos interfaces utilisateur.",
+  "published": true,
+  "tags": ["mantine", "react", "components", "ui-library"]
+}
+
+### 45. Article sur Chakra UI (brouillon)
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "Chakra UI : Design system simple et modulaire",
+  "content": "Chakra UI combine simplicité et puissance pour React. Style props, thème système, composants accessibles... créez des interfaces cohérentes rapidement.",
+  "published": false,
+  "tags": ["chakra-ui", "react", "design-system", "accessibility"]
+}
+
+### 46. Article sur Emotion
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "Emotion : CSS-in-JS performant et flexible",
+  "content": "Emotion apporte le CSS-in-JS avec d'excellentes performances. Styled components, css prop, theming... stylisez vos composants React avec flexibilité et performance.",
+  "excerpt": "CSS-in-JS moderne avec Emotion",
+  "published": true,
+  "tags": ["emotion", "css-in-js", "react", "styling"]
+}
+
+### 47. Article sur Stitches (brouillon)
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "Stitches : CSS-in-JS avec variants et tokens",
+  "content": "Stitches révolutionne le CSS-in-JS avec ses variants et design tokens. Type-safety, performance, DX... créez des systèmes de design cohérents et maintenables.",
+  "published": false,
+  "tags": ["stitches", "css-in-js", "design-tokens", "variants"]
+}
+
+### 48. Article sur Vanilla Extract
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "Vanilla Extract : CSS-in-TypeScript zero-runtime",
+  "content": "Vanilla Extract génère du CSS statique à partir de TypeScript. Zero-runtime, type-safety, performance... profitez des avantages du CSS-in-JS sans le coût runtime.",
+  "published": true,
+  "tags": ["vanilla-extract", "css", "typescript", "zero-runtime"]
+}
+
+### 49. Article sur Tauri (brouillon)
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "Tauri : Applications desktop avec technologies web",
+  "content": "Tauri permet de créer des applications desktop légères avec HTML, CSS et JavaScript. Sécurité, performance, taille réduite... une alternative moderne à Electron.",
+  "published": false,
+  "tags": ["tauri", "desktop", "rust", "web-technologies"]
+}
+
+### 50. Article sur Bun
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "Bun : Runtime JavaScript ultra-rapide",
+  "content": "Bun révolutionne l'écosystème JavaScript avec sa vitesse exceptionnelle. Runtime, bundler, package manager... découvrez cet outil tout-en-un qui repense les performances JavaScript.",
+  "excerpt": "JavaScript ultra-rapide avec Bun",
+  "published": true,
+  "tags": ["bun", "javascript", "runtime", "performance"]
+}
+
+###
+# 🎯 RÉSUMÉ DES 50 ARTICLES AJOUTÉS :
+# 
+# 📊 RÉPARTITION :
+# - 26 articles PUBLIÉS (published: true)
+# - 24 articles BROUILLONS (published: false)
+#
+# 🏷️ TECHNOLOGIES COUVERTES :
+# - Frontend: React, Vue.js, Angular, Svelte, Solid.js
+# - Backend: Node.js, Python, Rust, Deno
+# - Bases de données: PostgreSQL, MongoDB, Redis, Elasticsearch
+# - DevOps: Docker, Kubernetes, AWS, Nginx
+# - Outils: Git, Webpack, Vite, Jest, Cypress, Playwright
+# - UI/UX: Tailwind, Mantine, Chakra UI, Framer Motion
+# - Et bien plus...
+#
+# 🚀 UTILISATION :
+# 1. Exécutez tous les tests dans l'ordre
+# 2. Utilisez ensuite api-tests.http pour tester avec ce contenu enrichi
+# 3. Testez la pagination, recherche et filtres avec plus de données
+###

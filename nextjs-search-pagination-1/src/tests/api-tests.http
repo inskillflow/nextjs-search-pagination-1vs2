@@ -1,0 +1,205 @@
+###
+# API Articles Next.js 15 - Tests complets
+# Assurez-vous que le serveur fonctionne sur http://localhost:3000
+###
+
+### 1. Tester la page d'accueil
+GET http://localhost:3000
+
+### 2. Lister tous les articles (défaut - page 1, limit 10)
+GET http://localhost:3000/api/articles
+
+### 3. Lister avec pagination personnalisée
+GET http://localhost:3000/api/articles?page=1&limit=5
+
+### 4. Créer un premier article
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "Introduction à Next.js 15",
+  "content": "Next.js 15 apporte de nombreuses améliorations significatives pour le développement d'applications React modernes. Cette version introduit des optimisations de performance, de nouveaux hooks et une meilleure expérience développeur.",
+  "excerpt": "Découvrez les nouveautés de Next.js 15",
+  "published": true,
+  "tags": ["nextjs", "react", "javascript", "web"]
+}
+
+### 5. Créer un deuxième article
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "Guide complet TypeScript",
+  "content": "TypeScript est un sur-ensemble de JavaScript qui ajoute des types statiques. Ce guide vous accompagne dans l'apprentissage de TypeScript, des bases aux concepts avancés comme les génériques, les types utilitaires et les décorateurs.",
+  "excerpt": "Maîtrisez TypeScript de A à Z",
+  "published": true,
+  "tags": ["typescript", "javascript", "programmation"]
+}
+
+### 6. Créer un article brouillon
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "Article en cours de rédaction",
+  "content": "Ceci est un brouillon d'article qui n'est pas encore publié. Il contient des idées préliminaires et des notes pour un futur article sur les meilleures pratiques en développement web.",
+  "published": false,
+  "tags": ["brouillon", "idées"]
+}
+
+### 7. Créer un article avec données minimales
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "Article minimal",
+  "content": "Contenu minimal avec exactement dix caractères pour tester la validation."
+}
+
+### 8. Test validation - Titre vide (doit échouer)
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "",
+  "content": "Ce test doit échouer car le titre est vide"
+}
+
+### 9. Test validation - Contenu trop court (doit échouer)
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "Test validation",
+  "content": "Court"
+}
+
+### 10. Test validation - Trop de tags (doit échouer)
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+  "title": "Test trop de tags",
+  "content": "Ce test vérifie la limite de 10 tags maximum",
+  "tags": ["tag1", "tag2", "tag3", "tag4", "tag5", "tag6", "tag7", "tag8", "tag9", "tag10", "tag11"]
+}
+
+### 11. Lister les articles après création
+GET http://localhost:3000/api/articles
+
+### 12. Récupérer un article par ID
+# Utilisez un ID réel obtenu dans la réponse précédente
+GET http://localhost:3000/api/articles/5144849e6eb08ed775860b62fbf745ad
+
+### 13. Modifier un article existant
+# Utilisez un ID réel
+PUT http://localhost:3000/api/articles/5144849e6eb08ed775860b62fbf745ad
+Content-Type: application/json
+
+{
+  "title": "Article modifié - Nouveau titre",
+  "excerpt": "Extrait mis à jour après modification"
+}
+
+### 14. Recherche avancée - terme simple
+GET http://localhost:3000/api/articles/search?q=Next.js
+
+### 15. Recherche avancée - terme TypeScript
+GET http://localhost:3000/api/articles/search?q=TypeScript
+
+### 16. Recherche avancée - terme trop court (doit retourner message)
+GET http://localhost:3000/api/articles/search?q=a
+
+### 17. Filtrer par statut - articles publiés seulement
+GET http://localhost:3000/api/articles?published=true
+
+### 18. Filtrer par statut - brouillons seulement
+GET http://localhost:3000/api/articles?published=false
+
+### 19. Filtrer par tags - articles avec tag "nextjs"
+GET http://localhost:3000/api/articles?tags=nextjs
+
+### 20. Filtrer par tags multiples
+GET http://localhost:3000/api/articles?tags=nextjs,react
+
+### 21. Recherche combinée - terme + statut publié
+GET http://localhost:3000/api/articles?q=Next&published=true
+
+### 22. Pagination - page 2
+GET http://localhost:3000/api/articles?page=2&limit=2
+
+### 23. Test limite de pagination
+GET http://localhost:3000/api/articles?page=1&limit=100
+
+### 24. Test pagination invalide - limit trop élevé (doit utiliser max 100)
+GET http://localhost:3000/api/articles?page=1&limit=150
+
+### 25. Test pagination invalide - page négative (doit utiliser page 1)
+GET http://localhost:3000/api/articles?page=-1&limit=5
+
+### 26. Modifier un article - publier un brouillon
+# Utilisez l'ID du brouillon (article non publié)
+PUT http://localhost:3000/api/articles/5fff412c4ba131c6812df66654b51e8d
+Content-Type: application/json
+
+{
+  "published": true,
+  "title": "Article publié - anciennement brouillon"
+}
+
+### 27. Modifier un article - ajouter des tags
+# Utilisez un ID réel
+PUT http://localhost:3000/api/articles/5fff412c4ba131c6812df66654b51e8d
+Content-Type: application/json
+
+{
+  "tags": ["mis-à-jour", "modifié", "test"]
+}
+
+### 28. Test modification article inexistant (doit échouer 404)
+PUT http://localhost:3000/api/articles/id-inexistant
+Content-Type: application/json
+
+{
+  "title": "Tentative de modification article inexistant"
+}
+
+### 29. Supprimer un article
+# Utilisez un ID réel que vous voulez supprimer
+DELETE http://localhost:3000/api/articles/5fff412c4ba131c6812df66654b51e8d
+
+### 30. Test suppression article inexistant (doit échouer 404)
+DELETE http://localhost:3000/api/articles/id-inexistant
+
+### 31. Vérifier la liste finale après suppressions
+GET http://localhost:3000/api/articles
+
+### 32. Test endpoint inexistant (doit échouer 404)
+GET http://localhost:3000/api/articles/route-inexistante
+
+### 33. Test méthode non supportée (doit échouer 405)
+PATCH http://localhost:3000/api/articles
+
+### 34. Statistiques finales - compter tous les articles
+GET http://localhost:3000/api/articles?limit=100
+
+### 35. Test recherche sans résultats
+GET http://localhost:3000/api/articles/search?q=termeinexistant
+
+###
+# Instructions d'utilisation :
+# 1. Démarrez le serveur : npm run dev
+# 2. Installez l'extension "REST Client" dans VS Code
+# 3. Exécutez les tests dans l'ordre en cliquant sur "Send Request"
+# 4. Les IDs sont mis à jour avec les valeurs actuelles
+# 5. Observez les réponses et codes de statut
+# 6. Les tests 8, 9, 10, 28, 30, 32, 33 doivent échouer (c'est normal)
+#
+# CORRECTIONS APPLIQUÉES :
+# - Problème de validation Zod avec les paramètres null/undefined
+# - Problème avec les paramètres async dans Next.js 15 (params doit être awaité)
+# - Gestion d'erreurs améliorée avec détails des erreurs Zod
+# - IDs mis à jour avec les valeurs actuelles du serveur
+#
+# L'API EST MAINTENANT PLEINEMENT FONCTIONNELLE !
+###
