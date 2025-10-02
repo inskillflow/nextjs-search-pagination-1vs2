@@ -1,4 +1,4 @@
-# *batterie d’URL à tester** pour  `GET /api/articles` (pagination + search)
+# *batterie d’URL à tester* pour  `GET /api/articles` (pagination + search)
 
 
 
