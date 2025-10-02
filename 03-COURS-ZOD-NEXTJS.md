@@ -3,25 +3,117 @@
 
 ---
 
-## Table des Matières
+## Table des Matières Complète
 
-### Niveau Débutant
-1. [Introduction à Zod](#1-introduction-à-zod)
-2. [Premiers Schémas](#2-premiers-schémas)
-3. [Types de Base](#3-types-de-base)
-4. [Validation Simple](#4-validation-simple)
+### NIVEAU DÉBUTANT
 
-### Niveau Intermédiaire
-5. [Transformations](#5-transformations)
-6. [Schémas Composés](#6-schémas-composés)
-7. [Validation dans les API Routes](#7-validation-dans-les-api-routes)
-8. [Gestion des Erreurs](#8-gestion-des-erreurs)
+#### [1. Introduction à Zod](#1-introduction-à-zod)
+- [Qu'est-ce que Zod?](#quest-ce-que-zod)
+- [Installation](#installation)
+- [Premier Exemple](#premier-exemple)
 
-### Niveau Avancé
-9. [z.coerce vs Transformations Manuelles](#9-zcoerce-vs-transformations-manuelles)
-10. [Patterns Avancés](#10-patterns-avancés)
-11. [Intégration Next.js 15](#11-intégration-nextjs-15)
-12. [Optimisations et Bonnes Pratiques](#12-optimisations-et-bonnes-pratiques)
+#### [2. Premiers Schémas](#2-premiers-schémas)
+- [Schéma Simple des Projets](#schéma-simple-des-projets)
+- [Comprendre z.object()](#comprendre-zobject)
+
+#### [3. Types de Base](#3-types-de-base)
+- [Types Primitifs](#types-primitifs)
+- [Exemple des Projets](#exemple-des-projets)
+- [Types Complexes](#types-complexes)
+
+#### [4. Validation Simple](#4-validation-simple)
+- [Méthodes de Validation](#méthodes-de-validation)
+  - [1. parse() - Lance une erreur](#1-parse---lance-une-erreur)
+  - [2. safeParse() - Retourne un résultat](#2-safeparse---retourne-un-résultat)
+- [Exemple des Projets](#exemple-des-projets-1)
+
+---
+
+### NIVEAU INTERMÉDIAIRE
+
+#### [5. Transformations](#5-transformations)
+- [Qu'est-ce qu'une Transformation?](#quest-ce-quune-transformation)
+- [Exemple du Projet 1: Transformation Manuelle](#exemple-du-projet-1-transformation-manuelle)
+- [Exemple d'Utilisation](#exemple-dutilisation)
+
+#### [6. Schémas Composés](#6-schémas-composés)
+- [Réutilisation de Schémas](#réutilisation-de-schémas)
+- [Méthode .partial()](#méthode-partial)
+- [Autres Méthodes Utiles](#autres-méthodes-utiles)
+
+#### [7. Validation dans les API Routes](#7-validation-dans-les-api-routes)
+- [Structure Complète (des Projets)](#structure-complète-des-projets)
+- [Validation des Query Parameters](#validation-des-query-parameters)
+
+#### [8. Gestion des Erreurs](#8-gestion-des-erreurs)
+- [Structure d'une ZodError](#structure-dune-zoderror)
+- [DIFFÉRENCE IMPORTANTE: error.issues vs error.errors](#différence-importante-errorissues-vs-errorerrors)
+- [Handler Complet des Erreurs](#handler-complet-des-erreurs)
+
+---
+
+### NIVEAU AVANCÉ
+
+#### [9. z.coerce vs Transformations Manuelles](#9-zcoerce-vs-transformations-manuelles)
+- [C'est LA DIFFÉRENCE MAJEURE entre les deux projets](#cest-la-différence-majeure-entre-les-deux-projets)
+- [Qu'est-ce que z.coerce?](#quest-ce-que-zcoerce)
+- [Projet 1: Approche Manuelle (Verbose)](#projet-1-approche-manuelle-verbose)
+- [Projet 2: Approche Moderne (z.coerce)](#projet-2-approche-moderne-zcoerce)
+- [Comparaison Détaillée](#comparaison-détaillée)
+- [Comportement de z.coerce](#comportement-de-zcoerce)
+  - [z.coerce.number()](#zcoercenumber)
+  - [z.coerce.boolean()](#zcoerceboolean)
+- [Solution pour Boolean dans Query Params](#solution-pour-boolean-dans-query-params)
+- [Quand Utiliser Quoi?](#quand-utiliser-quoi)
+
+#### [10. Patterns Avancés](#10-patterns-avancés)
+- [Pattern 1: Validation Conditionnelle](#pattern-1-validation-conditionnelle)
+- [Pattern 2: Validation de Tableau avec Transformation](#pattern-2-validation-de-tableau-avec-transformation)
+- [Pattern 3: Validation avec Messages Personnalisés](#pattern-3-validation-avec-messages-personnalisés)
+- [Pattern 4: Chaînage de Transformations](#pattern-4-chaînage-de-transformations)
+- [Pattern 5: Union avec Discriminant](#pattern-5-union-avec-discriminant)
+
+#### [11. Intégration Next.js 15](#11-intégration-nextjs-15)
+- [DIFFÉRENCE: Async Params](#différence-async-params)
+- [Projet 1: Next.js 15 Ready (CORRECT)](#projet-1-nextjs-15-ready-correct)
+- [Projet 2: Style Next.js 14 (DEPRECATED)](#projet-2-style-nextjs-14-deprecated)
+- [Migration Next.js 14 → 15](#migration-nextjs-14--15)
+- [Pourquoi ce Changement?](#pourquoi-ce-changement)
+
+#### [12. Optimisations et Bonnes Pratiques](#12-optimisations-et-bonnes-pratiques)
+- [Pratique 1: Définir les Schémas Globalement](#pratique-1-définir-les-schémas-globalement)
+- [Pratique 2: Exporter les Types Inférés](#pratique-2-exporter-les-types-inférés)
+- [Pratique 3: Utiliser .default() pour Valeurs par Défaut](#pratique-3-utiliser-default-pour-valeurs-par-défaut)
+- [Pratique 4: Séparer Validation et Logique Métier](#pratique-4-séparer-validation-et-logique-métier)
+- [Pratique 5: Créer des Schémas Réutilisables](#pratique-5-créer-des-schémas-réutilisables)
+- [Pratique 6: Validation en Couches](#pratique-6-validation-en-couches)
+- [Pratique 7: Gestion Centralisée des Erreurs](#pratique-7-gestion-centralisée-des-erreurs)
+- [Pratique 8: Performance avec .passthrough()](#pratique-8-performance-avec-passthrough)
+
+---
+
+### SECTIONS FINALES
+
+- [Comparaison Finale: Version Optimale](#comparaison-finale-version-optimale)
+  - [Synthèse des Meilleures Pratiques](#synthèse-des-meilleures-pratiques)
+  - [Route API Complète (Next.js 15)](#route-api-complète-nextjs-15)
+  - [Route Dynamique (Next.js 15)](#route-dynamique-nextjs-15)
+  - [Handler d'Erreurs Complet](#handler-derreurs-complet)
+
+- [Récapitulatif: Ce qu'on a Appris](#récapitulatif-ce-quon-a-appris)
+  - [Niveau Débutant](#niveau-débutant)
+  - [Niveau Intermédiaire](#niveau-intermédiaire)
+  - [Niveau Avancé](#niveau-avancé)
+  - [Points Clés des Projets](#points-clés-des-projets)
+
+- [Exercices Pratiques](#exercices-pratiques)
+  - [Exercice 1: Créer un Schéma Utilisateur](#exercice-1-créer-un-schéma-utilisateur)
+  - [Exercice 2: Pagination Avancée](#exercice-2-pagination-avancée)
+  - [Exercice 3: Validation de Fichier Upload](#exercice-3-validation-de-fichier-upload)
+  - [Exercice 4: Migration Projet 1 → Optimale](#exercice-4-migration-projet-1--optimale)
+
+- [Ressources Supplémentaires](#ressources-supplémentaires)
+- [Conclusion](#conclusion)
 
 ---
 
